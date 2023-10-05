@@ -1,32 +1,19 @@
-import {
-  Refine,
-  GitHubBanner,
-  WelcomePage,
-  Authenticated,
-} from "@refinedev/core";
+import { Refine, GitHubBanner } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 
-import {
-  AuthPage,
-  ErrorComponent,
-  notificationProvider,
-  RefineSnackbarProvider,
-  ThemedLayoutV2,
-} from "@refinedev/mui";
+import { notificationProvider, RefineSnackbarProvider } from "@refinedev/mui";
 
 import GlobalStyles from "@mui/material/GlobalStyles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { BrowserRouter, Route, Routes, Outlet } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routerBindings, {
   NavigateToResource,
-  CatchAllNavigate,
   UnsavedChangesNotifier,
   DocumentTitleHandler,
 } from "@refinedev/react-router-v6";
 import dataProvider from "@refinedev/simple-rest";
 import { ColorModeContextProvider } from "./contexts/color-mode";
-import { Header } from "./components/header";
 import { MuiInferencer } from "@refinedev/inferencer/mui";
 
 function App() {
